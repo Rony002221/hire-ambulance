@@ -1,10 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/home/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Assignment 10 </h1>
+      
+      <Home></Home>
+      
     </div>
   );
 }

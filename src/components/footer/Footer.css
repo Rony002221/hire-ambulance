@@ -1,0 +1,13 @@
+.footer_Section{
+    margin: 0 auto;
+    background-color: rgb(21, 24, 22);
+    color: azure;
+    text-align: center;
+    line-height: 15px;
+    padding: 2%;
+}
+
+.footer_Section h4 span{
+    color: rgb(152, 110, 192);
+    
+}
