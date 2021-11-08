@@ -1,0 +1,13 @@
+.header_Section{
+    margin: 0 auto;
+    background-color: rgb(55, 65, 61);
+    color: azure;
+    text-align: center;
+    line-height: 15px;
+    padding: 2%;
+}
+
+.header_Section h4 span{
+    color: rgb(152, 110, 192);
+    
+}
