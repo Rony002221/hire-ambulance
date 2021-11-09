@@ -1,13 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form,Button, Card } from 'react-bootstrap';
 import Footer from '../footer/Footer';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import initializeFireBase from '../firebase/FireBaseInit';
+
+initializeFireBase();
+const provider = new GoogleAuthProvider();
 
 const Login = () => {
+
+
+  const auth = getAuth();
+  const [user, setUser] = useState({});
+
+
+
+  ////////////////////////////// Function for Google Sign Up/////////////////
+  const handleGoogleSignUp = ()=>{
+
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      
+        const {displayName, email, photoURL} = result.user;
+
+        const userInfo = {
+          name : displayName,
+          email : email,
+          photo : photoURL,
+        }
+
+        setUser(userInfo);
+
+
+    }).catch((error) => {
+      
+    });
+
+  }
+
+
+
+
     return (
         <div>
           
             <div className="container p-5 m-5 ">
 
+            <h1> {user.name}</h1>
             <Card style={{ width: '60%', background : 'rgb(238, 236, 234)' }} className = "m-auto">
               <Card.Body><Form>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -26,9 +65,15 @@ const Login = () => {
                     <Form.Check type="checkbox" label="Remember me" />
                   </Form.Group>
                   <Button variant="primary" type="submit">
-                    Submit
+                    Log In
                   </Button>
                 </Form></Card.Body>
+
+                <hr />
+                <Button variant="dark" onClick = {handleGoogleSignUp} >Sign In With Google <i class="fab fa-google"></i></Button>
+                <br />
+                <Button variant="dark">Sign In With GitHub <i class="fab fa-github"></i></Button>
+                
             </Card>
 
             

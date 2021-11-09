@@ -12,7 +12,10 @@ import About from './components/about/About';
 import Login from './components/login/Login';
 import Error from './components/404/_404';
 import Details from './components/details/Details';
+import initializeFireBase from './components/firebase/FireBaseInit';
 
+
+initializeFireBase();
 function App() {
   return (
     <div className="App">
