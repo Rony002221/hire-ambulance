@@ -1,9 +1,19 @@
 import React from 'react';
-import { Link } from 'react-bootstrap';
 import './Ambulance.css'
+import {useHistory} from 'react-router-dom'
 
 const Ambulance = (props) => {
-    const {id,type,fee,picture,short_description,size,details} = props.data_of_ambulance || {}
+    
+    const {id,type,picture,short_description} = props.data_of_ambulance || {}
+
+    const history = useHistory();
+
+    const showDetailsButton = (key) =>{
+        const uri = `/details/${key}`
+
+        history.push(uri);
+    }
+    
     return (
         <div className="col-md-4">
         <div className="card single_ambulance" >
@@ -13,9 +23,9 @@ const Ambulance = (props) => {
               <h6 class="card-title">{short_description}..</h6> <hr />
               <span><i class="far fa-thumbs-up"></i></span> 
 
-            {/* <Link to= {`/details/${id}`}>   */}
-              <button type="button"  class="btn btn-primary btn-sm"><i class="far fa-check-circle"></i> Details</button>
-            {/* </Link> */}
+            
+              <button type="button" onClick = {()=>showDetailsButton(id)}  class="btn btn-primary btn-sm"><i class="far fa-check-circle"></i> Details</button>
+            
             </div>
           </div>
     </div>

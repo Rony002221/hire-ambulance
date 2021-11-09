@@ -6,7 +6,7 @@ const About = () => {
         <div>
             <br /><br />
             
-            <h2 className = "text-center text-primary">ABOUT US (SHORT PROFILE OF JPS BD)</h2><br /><hr />
+            <h2 className = "text-center text-primary">ABOUT US (SHORT PROFILE OF D.A.S. BD)</h2><br /><hr />
 
 
            <div className="container">
@@ -16,12 +16,12 @@ const About = () => {
                   <tbody className = "">
                     <tr>
                       <th scope="row">Full Name</th>
-                      <td>Job Preparation Service BD</td>
+                      <td>Dhaka Ambulance Service BD</td>
                       
                     </tr>
                     <tr>
                       <th scope="row">Short Name</th>
-                      <td>JPS BD</td>
+                      <td>D.A.S BD</td>
                       
                     </tr>
                     <tr>
@@ -30,24 +30,17 @@ const About = () => {
                     </tr>
                     <tr>
                       <th scope="row">Background</th>
-                      <td colspan="2">Bangladesh Association of Software and Information Services (BASIS) is the national trade body for Software & IT Enabled Service industry of Bangladesh. Established in 1997, the association has been working with a vision of developing vibrant software & IT service industry in the country. Currently BASIS has over 800 members who contribute the majority in the Software & IT service industry in Bangladesh.</td>
+                      <td colspan="2">We provide. ICU Ambulance Service, Ac ambulance, freezing ambulance. Best Ambulance Service, Competitive Pricing, No Hidden Charge Call Us for Ambulance. Cheap Fare Rate. 24/7 available. Online Booking Service. 10+Ambulance.</td>
                     </tr>
                     <tr>
-                      <th scope="row">Training Experience</th>
+                      <th scope="row"> Experience</th>
                       <td colspan="2">More than 10 years (Since 2010)</td>
                     </tr>
                     <tr>
-                      <th scope="row">Courses</th>
-                      <td colspan="2">MHR offers varieties of courses to meet the challenges of continuous change of technology and platform. Since 2007, BITM has offered training courses in diversified area ranges from Web Platform to Mobile Platform</td>
+                      <th scope="row">Service</th>
+                      <td colspan="2">The emergency department provides service 24 hours a day and 7 days a week. ICU ambulance service is also available for both critical and non-critical patient ...</td>
                     </tr>
-                    <tr>
-                      <th scope="row">Quality of Course Materials</th>
-                      <td colspan="2">All the course materials of JPS are designed and reviewed by Industry experts and practitioners. BASIS has course content and review team that regularly update the curriculum based on new technology and trends as well as market demand.</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Trainer</th>
-                      <td colspan="2">MHR-JPS-BD has pool of trainers with the industry work experience for minimum 3 years. Before offering any courses BASIS selects the trainer based on in-depth working experience on that relevant field.</td>
-                    </tr>
+                    
                   </tbody>
                 </table>
 
