@@ -42,6 +42,16 @@ const NavBar = () => {
           >
             About
           </NavLink>
+
+          <NavLink
+            to="/ragistration"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red"
+            }}
+          >
+            Ragistration
+          </NavLink>
             
           <NavLink
             to="/login"
