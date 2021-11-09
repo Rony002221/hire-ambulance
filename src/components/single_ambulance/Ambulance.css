@@ -1,0 +1,14 @@
+.single_ambulance{
+    width: 18em;
+    margin-bottom: 30px;
+}
+
+.single_ambulance img{
+    height: 200px;
+    
+}
+
+.single_ambulance span i{
+    color: rgb(57, 196, 38);
+    font-size: 25px;
+}

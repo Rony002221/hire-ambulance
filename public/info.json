@@ -2,7 +2,7 @@
     {
       "id": "01",
       "type": "Collective ambulance",
-      "cost": 7000,
+      "fee": 7000,
       "picture": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/ambulancia-colectiva.jpg",
       "short_description": "Collective ambulances is a type of ambulance that fits within non-medical ambulances or also called conventional ambulances.",
       "size": "small",
@@ -34,7 +34,7 @@
       "fee": 6000,
       "short_description": "This class of ambulances are those that are prepared for the care of the sick / as en route.",
       "size": "Big",
-      "pic": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/soporte-vital-basico-768x576.jpg",
+      "picture": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/soporte-vital-basico-768x576.jpg",
       "details": "Ambulances Basic Life Support (S.V.B.) are the fourth type of ambulance that exist. They are ambulances that are prepared for the care of the sick. Ambulances Basic Life Support (S.V.B.) are framed within the assistance ambulances. This class of ambulances are those that are prepared for the care of the sick / as en route. "
     },
     {
@@ -43,7 +43,7 @@
       "fee": 8000,
       "short_description": "it is an intervention resource without the ability to transport injured people.",
       "size": "Beginner",
-      "pic": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/DSCF8420-768x576.jpg",
+      "picture": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/DSCF8420-768x576.jpg",
       "details": "Medical care and nursing vehicles are vehicles designed to provide urgent health care. Unlike ambulances, it is an intervention resource without the ability to transport injured people.Medical care and nursing vehicles are vehicles designed to provide urgent health care. Unlike ambulances, it is an intervention resource without the ability to transport injured people."
     },
 
@@ -53,7 +53,7 @@
       "fee": 3000,
       "short_description": "Its use is intended for large crowd events, sporting events or non-routine incidents in urban areas",
       "size": "Big",
-      "pic": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/unidad-logistica-movil-768x576.jpg",
+      "picture": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/unidad-logistica-movil-768x576.jpg",
       "details": "A logistics unit of AMV (Multiple Victim Assistance) is a fully configurable health, medical or advanced care position. Its use is intended for large crowd events, sporting events or non-routine incidents in urban areas.A logistics unit of AMV (Multiple Victim Assistance) is a fully configurable health, medical or advanced care position. Its use is intended for large crowd events, sporting events or non-routine incidents in urban areas.A logistics unit of AMV (Multiple Victim Assistance) is a fully configurable health, medical or advanced care position. Its use is intended for large crowd events, sporting events or non-routine incidents in urban areas."
     },
     {
@@ -62,7 +62,7 @@
       "fee": 4000,
       "short_description": "Its use is reserved for those accidents with numerous patients",
       "size": "small",
-      "pic": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/hospital-camapana-768x514.jpg",
+      "picture": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.ambulanciascivera.com/wp-content/uploads/2018/09/hospital-camapana-768x514.jpg",
       "details": "A field hospital is a large mobile medical unit that allows the injured to be treated provisionally in the same place before they can be transferred safely to a fixed hospital. Its use is reserved for those accidents with numerous patients and that should be attended to immediately. The field hospitals are designed for any type of catastrophe, event or for any emergency action. However, its use in mass preventive events such as sports, cultural events, etc. is frequent."
     }
             

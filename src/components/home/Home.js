@@ -1,15 +1,18 @@
 import React from 'react';
-import NavBar from '../navBar/NavBar';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
+import HomeBody from '../main_container/Container';
+
 
 const Home = () => {
     return (
         <div>
-            <NavBar></NavBar>
-            <Header></Header>
 
-            <Footer></Footer>
+            
+            <Header></Header>
+            <HomeBody></HomeBody>
+            <Footer/>
+            
             
         </div>
     );

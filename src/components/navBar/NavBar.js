@@ -1,22 +1,61 @@
 import React from 'react';
 import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">MHR</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Services</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <Nav.Link href="#link">About Us</Nav.Link>
-            <Nav.Link href="#link">Log In</Nav.Link>
+      <Navbar.Brand href="#home">MHR</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+          
+        <Nav className="ms-auto p-2">
+
+        <Stack direction="horizontal" gap={5}>
+        <NavLink
+            to="/home"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red"
+            }}
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/service"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red"
+            }}
+          >
+            All Ambulances
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red"
+            }}
+          >
+            About
+          </NavLink>
             
-          </Nav>
-        </Navbar.Collapse>
+          <NavLink
+            to="/login"
+            activeStyle={{
+              fontWeight: "bold",
+              color: "red"
+            }}
+          >
+            Log In
+          </NavLink>
+        </Stack>
+
+        </Nav>
+      </Navbar.Collapse>
       </Container>
     </Navbar>
     );
