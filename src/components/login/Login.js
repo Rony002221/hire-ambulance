@@ -1,72 +1,14 @@
-import React, { useState } from 'react';
 import { Form,Button, Card } from 'react-bootstrap';
+import useFirebase from '../custom_Hook/useFirebase';
 import Footer from '../footer/Footer';
-import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider } from "firebase/auth";
-import initializeFireBase from '../firebase/FireBaseInit';
-
-initializeFireBase();
-const provider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
 const Login = () => {
 
 
-  const auth = getAuth();
-  const [user, setUser] = useState({});
+  ////////////deStructuring from custom Hook/////////////////////
+  const {handleGoogleSignUp,handleGitHubSignUp, user} = useFirebase();
 
-
-
-  ////////////////////////////// Function for Google Sign Up/////////////////
-  const handleGoogleSignUp = ()=>{
-
-    signInWithPopup(auth, provider)
-    .then((result) => {
-      
-        const {displayName, email, photoURL} = result.user;
-
-        const userInfo = {
-          name : displayName,
-          email : email,
-          photo : photoURL,
-        }
-
-        setUser(userInfo);
-
-        console.log(userInfo)
-
-    }).catch((error) => {
-      
-    });
-
-  }
-
-
-    ////////////////////////////// Function for GitHub Sign Up/////////////////
-    const handleGitHubSignUp = ()=>{
-
-      signInWithPopup(auth, githubProvider)
-      .then((result) => {
-      
-          const {displayName, email, photoURL} = result.user;
-
-          const userInfo = {
-            name : displayName,
-            email : email,
-            photo : photoURL,
-          }
-
-          setUser(userInfo);
-
-          console.log(userInfo)
-
-      }).catch((error) => {
-      
-      });
-
-    }
-
-
-
+  
 
     return (
         <div>
