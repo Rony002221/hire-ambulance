@@ -1,8 +1,13 @@
 import React from 'react';
 import { Nav, Navbar, Container, Stack } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../../custom_Hook/useFirebase';
 
 const NavBar = () => {
+
+  const {handleSignOut, user} =useFirebase();
+
+
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -52,6 +57,13 @@ const NavBar = () => {
           >
             Ragistration
           </NavLink>
+
+          {user.email ? (<NavLink
+            to = "/"
+            onClick = {handleSignOut}
+          >
+            Log Out
+          </NavLink>) : (
             
           <NavLink
             to="/login"
@@ -62,6 +74,10 @@ const NavBar = () => {
           >
             Log In
           </NavLink>
+) }
+
+          
+          
         </Stack>
 
         </Nav>

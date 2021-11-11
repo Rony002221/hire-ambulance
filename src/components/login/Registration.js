@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Form,Button } from 'react-bootstrap';
 import Footer from '../footer/Footer';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import initializeFireBase from '../firebase/FireBaseInit';
+import initializeFireBase from '../../firebase/FireBaseInit';
 
 initializeFireBase();
 const Registration = () => {

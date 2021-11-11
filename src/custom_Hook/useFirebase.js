@@ -1,7 +1,7 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider,onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider,onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from 'react';
-
 import initializeFireBase from "../firebase/FireBaseInit";
+
 
 initializeFireBase();
 
@@ -83,12 +83,22 @@ const useFirebase = ()=>{
         },[])
 
 
+        ////////////////////funtionality for sign out////////////
+        const handleSignOut = ()=>{
+
+            signOut(auth).then(() => {
+            
+                setUser({});
+              }).catch((error) => {
+                // An error happened.
+              });
+
+        }
 
 
 
 
-
-    return {handleGoogleSignUp,handleGitHubSignUp,user}
+    return {handleGoogleSignUp,handleGitHubSignUp,user,handleSignOut}
 }
 
 export default useFirebase;

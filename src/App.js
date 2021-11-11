@@ -13,57 +13,60 @@ import Login from './components/login/Login';
 import Ragistration from './components/login/Registration';
 import Error from './components/404/_404';
 import Details from './components/details/Details';
-import initializeFireBase from './components/firebase/FireBaseInit';
+import initializeFireBase from './firebase/FireBaseInit';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './private_route/PrivateRoute';
 
 
 initializeFireBase();
 function App() {
   return (
     <div className="App">
-      
-      <Router>
+        <AuthProvider>
+        <Router>
 
-<NavBar></NavBar>
+            <NavBar></NavBar>
 
-<Switch>
-    
-    <Route exact path="/">
-      <Home />
-    </Route>
-    <Route path="/home">
-      <Home />
-    </Route>
-    <Route path="/about">
-      <About />
-    </Route>
-    <Route path="/service">
-      <Service/>
-    </Route>
-    
-    <Route path="/ragistration">
-      <Ragistration/>
-    </Route>
-    
-
-
-    <Route path="/login">
-      <Login></Login>
-    </Route>
-    
-    <Route path="/details/:id">
-      <Details />
-    </Route>
-    
-    
-    <Route exact path="*">
-      <Error />
-    </Route>
-    
-  </Switch>
+            <Switch>
+                
+                    <Route exact path="/">
+                      <Home />
+                    </Route>
+                    <Route path="/home">
+                      <Home />
+                    </Route>
+                    <PrivateRoute path="/about">
+                      <About />
+                    </PrivateRoute>
+                    <Route path="/service">
+                      <Service/>
+                    </Route>
+                    
+                    <Route path="/ragistration">
+                      <Ragistration/>
+                    </Route>
+                    
 
 
-</Router>
-      
+                    <Route path="/login">
+                      <Login></Login>
+                    </Route>
+                    
+                    <Route path="/details/:id">
+                      <Details />
+                    </Route>
+                    
+                    
+                    <Route exact path="*">
+                      <Error />
+                    </Route>
+                
+                
+              </Switch>
+
+
+        </Router>
+        </AuthProvider>
     </div>
   );
 }
