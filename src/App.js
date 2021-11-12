@@ -7,7 +7,6 @@ import {
   Route,
 } from "react-router-dom";
 import NavBar from './components/navBar/NavBar';
-import Service from './components/service/Service';
 import About from './components/about/About';
 import Login from './components/login/Login';
 import Ragistration from './components/login/Registration';
@@ -16,6 +15,7 @@ import Details from './components/details/Details';
 import initializeFireBase from './firebase/FireBaseInit';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './private_route/PrivateRoute';
+import Contact from './components/contactUs/Contact';
 
 
 initializeFireBase();
@@ -32,32 +32,32 @@ function App() {
                     <Route exact path="/">
                       <Home />
                     </Route>
-                    <Route path="/home">
+                    <Route exact path="/home">
                       <Home />
                     </Route>
-                    <PrivateRoute path="/about">
+                    <Route exact path="/about">
                       <About />
-                    </PrivateRoute>
-                    <Route path="/service">
-                      <Service/>
+                    </Route>
+                    <Route exact path="/contact">
+                      <Contact/>
                     </Route>
                     
-                    <Route path="/ragistration">
+                    <Route exact path="/ragistration">
                       <Ragistration/>
                     </Route>
                     
 
 
-                    <Route path="/login">
+                    <Route exact path="/login">
                       <Login></Login>
                     </Route>
                     
-                    <Route path="/details/:id">
+                    <PrivateRoute exact path="/details/:id">
                       <Details />
-                    </Route>
+                    </PrivateRoute>
                     
                     
-                    <Route exact path="*">
+                    <Route  path="*">
                       <Error />
                     </Route>
                 

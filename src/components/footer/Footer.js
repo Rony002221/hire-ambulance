@@ -11,10 +11,10 @@ const Footer = () => {
             <Nav.Link href="/home">Contact Us</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1">Sign up</Nav.Link>
+            <Nav.Link eventKey="link-1">See Location</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2">Login</Nav.Link>
+            <Nav.Link eventKey="link-2">More Info</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             

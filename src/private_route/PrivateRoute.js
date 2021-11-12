@@ -12,20 +12,21 @@ import useAuth from "../custom_Hook/useAuth";
 
 const PrivateRoute = ({children, ...rest}) => {
 
-    let auth = useAuth();
-    let location = useLocation()
-    let history = useHistory()
+    const {user} = useAuth();
+    //console.log(rest);
+    // let location = useLocation()
+    // let history = useHistory()
     return (
         <Route
         {...rest}
         render={(props) =>
-          auth.email ? (
+          user.email ? (
             children
           ) : (
             <Redirect
               to={{
                 pathname: "/login",
-                state: { from: location }
+                //state: { from: location }
               }}
             />
           )

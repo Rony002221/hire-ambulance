@@ -29,13 +29,13 @@ const NavBar = () => {
           </NavLink>
 
           <NavLink
-            to="/service"
+            to="/contact"
             activeStyle={{
               fontWeight: "bold",
               color: "red"
             }}
           >
-            All Ambulances
+            Contact Us
           </NavLink>
 
           <NavLink

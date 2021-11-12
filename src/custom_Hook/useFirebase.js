@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider,onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,GithubAuthProvider,onAuthStateChanged, signOut,signInWithEmailAndPassword,createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useEffect, useState } from 'react';
 import initializeFireBase from "../firebase/FireBaseInit";
 
@@ -14,6 +14,75 @@ const useFirebase = ()=>{
     const [user, setUser] = useState({});
 
 
+    ////////////////////////////////////////////////////////////////////
+
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    const getEmail = (e)=>{
+
+      setEmail(e.target.value);
+
+    }
+    const getPassword = (e)=>{
+
+      setPassword(e.target.value);
+
+    }
+
+    const handleRegister = (e)=>
+    {
+      e.preventDefault();
+
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+     
+        const {displayName, email, photoURL} = result.user;
+
+        const userInfo = {
+          name : displayName,
+          email : email,
+          photo : photoURL,
+        }
+
+        setUser(userInfo);
+        //console.log(result.user)
+      })
+      .catch((error) => {
+     
+        const errorMessage = error.message;
+        console.log(errorMessage)
+      });
+    }
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////////
+
+    const handleEmailPasswordLogIn = (e)=> 
+    { e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((result) => {
+      // Signed in 
+      const {displayName, email, password} = result.user;
+
+      const userInfo = {
+        name : displayName,
+        email : email,
+        password : password,
+      }
+
+      setUser(userInfo);
+      // ...
+    })
+    .catch((error) => {
+      
+    });
+
+  }
 
     ////////////////////////////// Function for Google Sign Up/////////////////
     const handleGoogleSignUp = ()=>{
@@ -38,6 +107,11 @@ const useFirebase = ()=>{
         });
 
       }
+
+
+        
+        
+
 
 
         ////////////////////////////// Function for GitHub Sign Up/////////////////
@@ -95,10 +169,10 @@ const useFirebase = ()=>{
 
         }
 
+        
 
 
-
-    return {handleGoogleSignUp,handleGitHubSignUp,user,handleSignOut}
+    return {handleGoogleSignUp,handleGitHubSignUp,user,handleSignOut,handleEmailPasswordLogIn,getEmail,getPassword}
 }
 
 export default useFirebase;

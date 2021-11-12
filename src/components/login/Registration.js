@@ -3,6 +3,7 @@ import { Card, Form,Button } from 'react-bootstrap';
 import Footer from '../footer/Footer';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import initializeFireBase from '../../firebase/FireBaseInit';
+import { Link } from 'react-router-dom';
 
 initializeFireBase();
 const Registration = () => {
@@ -49,15 +50,23 @@ const Registration = () => {
     });
   }
 
+
+
+    
+
+
+
+
     return (
        <div>
         <div className="container p-5 m-5 ">
 
-          <h1>{user.email}</h1>
+          <h3>{user.email}</h3><br />
 
 
         <Card style={{ width: '60%', background : 'rgb(235, 235, 234)' }} className = "m-auto">
           <Card.Body>
+          <h3><i>Please Register </i></h3> <hr />
             <Form onSubmit = {handleRegister}>
               <Form.Group className="mb-3" controlId="formBasicEmail" >
                 <Form.Label>Email address</Form.Label>
@@ -82,10 +91,9 @@ const Registration = () => {
             </Form>
             </Card.Body>
 
-            <hr /><hr />
-            <Button variant="outline-dark">Already have an account? </Button>
             <hr />
-          <Button variant="outline-secondary">Go to Log In page? </Button>
+            
+          <Button variant="outline-dark"><Link to = "/login">Go to Log In page? </Link></Button>
         </Card>
 
         <hr/>
